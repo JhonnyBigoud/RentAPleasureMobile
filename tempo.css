@@ -17,6 +17,9 @@ h2 {
 
 header {
     background-image: url('../images/bg0.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -24,6 +27,26 @@ header {
     color: white;
     text-align: center;
     height: 70vh;
+}
+
+header a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+header a:hover{
+    color: rgb(148, 148, 148);
+}
+
+ol, ul {
+    padding: 0;
+}
+li {
+    padding: 1px;
+}
+.navbar {
+    border-radius: 5px;
+    border: solid 1px lightgray;
 }
 
 .reservation-inputs {
@@ -69,6 +92,10 @@ i {
     transform: translateY(1px);
 }
 
+main {
+    background-color: rgba(128, 128, 128, 0.137);
+}
+
 article {
     display: flex;
     justify-content: space-between;
@@ -76,6 +103,13 @@ article {
     background-color: rgba(128, 128, 128, 0.137);
 }
 
+.right, .left {
+    cursor: pointer;
+}
+
+.right:hover, .left:hover {
+    color: goldenrod;
+}
 
 .buttons {
     display: flex;
@@ -111,6 +145,9 @@ article {
 article img {
     display: none;
     width: 65%;
+    border: solid 1.5px goldenrod;
+    border-radius: 3px;
+    box-shadow: 10px 10px 20px rgb(139, 134, 134);
 }
 
 .active {
@@ -122,9 +159,17 @@ article img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px auto 30px;
 }
 
+/* SELECT-PRODUCT */
 
+.select-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
 /* FOOTER */
 
 footer{ 
@@ -132,7 +177,7 @@ footer{
     text-align: center;
     justify-content: center;
     padding: 10px;
-    background-color: rgba(8, 125, 155, 0.247);
+    background-color: rgba(8, 125, 155, 0.125);
     font-size: 0.8rem;
 }
 
@@ -140,6 +185,8 @@ footer img {
     width: 150px;
     height: 150px;
     border-radius: 5px;
+    border: solid 1.5px goldenrod;
+
 }
 
 @media screen and (max-width: 576px) {
@@ -152,7 +199,27 @@ footer img {
     .pay-button {
         font-size: 10px;
     }
-    select {
+    .buttons {
         font-size: 9px;
+    }
+    footer {
+        display: none;
+    }
+    header {
+        height: 70vh;
+    }
+    main {
+        min-height: 30vh;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .select-product {
+        display: none;
+    }
+}
+@media screen and (min-width:992px) {
+    .buttons {
+        margin: 5vw 0px;
     }
 }
